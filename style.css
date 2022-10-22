@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+	--very-dark-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-color: var(--cream);
+	font-size: 14px;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	background-color: var(--white);
+	max-width: 800px;
+	height: 550px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.container__left {
+	width: 50%;
+	height: 100%;
+	background: url("./images/image-product-desktop.jpg");
+	background-size: cover;
+}
+
+.container__right {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 4% 5%;
+}
+
+.container__right span {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: var(--dark-grayish-blue);
+}
+
+.container__right h2 {
+	font-family: "Fraunces", sans-serif;
+	font-weight: 700;
+	/* font-size: 3rem; */
+	font-size: 3.5em;
+	/* line-height: 2.6rem; */
+	line-height: 0.8em;
+}
+
+.container__right p {
+	color: var(--dark-grayish-blue);
+	/* font-size: 1.14rem; */
+	font-size: 1.3em;
+	/* line-height: 1.8rem; */
+	line-height: 1.6em;
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	gap: 10%;
+}
+
+.price span:first-child {
+	font-family: "Fraunces", sans-serif;
+	/* font-size: 2rem; */
+	font-size: 2.3em;
+	letter-spacing: 1px;
+	color: var(--dark-cyan);
+}
+
+.price span:last-child {
+	letter-spacing: 1px;
+	text-decoration: line-through;
+}
+
+.container__right button {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	background-color: var(--dark-cyan);
+	width: 100%;
+	padding: 6%;
+	border: none;
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4%;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.container__right button:hover {
+	background-color: hsl(158, 36%, 17%);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 575px) {
+	body {
+		font-size: 8.5px;
+	}
+
+	.container {
+		flex-direction: column;
+		width: 300px;
+	}
+
+	.container__left {
+		height: 50%;
+		width: 100%;
+	}
+
+	.container__right {
+		padding: 4% 8%;
+		height: 50%;
+		width: 100%;
+	}
+}
